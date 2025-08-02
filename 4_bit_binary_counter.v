@@ -23,7 +23,7 @@ always @(posedge CLK or negedge CLR_n) // What is in the sensitivity list, is wh
 	begin 
         // Asynchronous resets typically go first before clocked logic
 		if(~CLR_n) 
-            Q <= 4'b0; 
+            Q <= 4'b0000; 
 
         else if(~Load_n) 
             Q <= D; // whatever user inputs // would I have to create a seperate variable? 
@@ -33,4 +33,5 @@ always @(posedge CLK or negedge CLR_n) // What is in the sensitivity list, is wh
 
 	end 
         // RCO logic which is combinational 
-        assign RCO = ((Q == 4'b1111) & ENT = 1'b1 & ENP = 1'b1); 
+        assign RCO = ((Q == 4'b1111) && ENT && ENP); 
+endmodule
