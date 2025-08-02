@@ -31,6 +31,3 @@ module FullAdd4( A,B,Cin,Sum,Cout);
     assign Cout = (A[3] & B[3]) | (A[3] & carry[2]) | (B[3] & carry[2]); // Calculate the final carry out
 
     
-
-
-endmodule // Majority  
