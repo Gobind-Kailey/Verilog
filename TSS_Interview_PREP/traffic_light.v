@@ -20,7 +20,7 @@ module traffic_light(
 
     // state registor (Sequential logic)
 
-    always @(posedge clk & posedge rst) begin 
+    always @(posedge clk or posedge rst) begin 
         if(rst)
             state <= RED; // Default state 
         else 
