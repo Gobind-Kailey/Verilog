@@ -97,6 +97,8 @@ assign GPIO		  		=	36'hzzzzzzzz;
 assign VGA_CLK = VGA_CTRL_CLK;
 assign resrt_n = KEY[0];
 
+// Because Cont is a 32 bit fixed-width register, when this reaches the max value of 
+// all the F's, this will reset back to all 0's which will be displayed. 
 always@(posedge MAX10_CLK2_50)
     begin
 			 Cont	<=	Cont+1;
