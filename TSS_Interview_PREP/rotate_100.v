@@ -27,14 +27,14 @@ always @(posedge clk) begin
 
     case(ena) 
 
-    2'01: begin // Shifting right 
+    2'b01: begin // Shifting right 
 
     q <= {q[0], q[99:1]}; 
 
 
     end 
 
-    2'10: begin 
+    2'b10: begin 
 
         q <= {q[98:0], q[99]};
     end 
