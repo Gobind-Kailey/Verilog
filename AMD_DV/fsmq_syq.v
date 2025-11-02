@@ -15,7 +15,6 @@ module simple_fsm_sync
     input wire in,
     output reg out 
    
-
 );
 
 parameter A = 0, B = 1; 
