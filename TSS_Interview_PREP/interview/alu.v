@@ -12,7 +12,7 @@ module alu(
 
 // declaring port list:
 
-    input wire clk,     
+    input wire clk,
     input wire [7:0] A, 
     input wire [7:0] B, 
     input wire rst, // aysnc
