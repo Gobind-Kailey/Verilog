@@ -7,6 +7,8 @@ module top_module (
 
     // Named state encodings
     parameter A = 2'b00, B = 2'b01, C = 2'b10, D = 2'b11;
+    // typedef enum logic [1:0] {A, B, C, D} state_t
+
 
     // Next state logic
     always @(*) begin
